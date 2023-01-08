@@ -1,0 +1,36 @@
+import React from "react";
+import { ItemTodo } from "../ItemTodo/ItemTodo";
+import { CounterTodo } from "../CounterTodo/CounterTodo";
+import "./ListTodo.css";
+
+function ListTodo({
+  mostrarTodos,
+  totalTodos,
+  completedTodos,
+  eliminarTodo,
+  marcarTodo,
+  eliminarTodoCompletados,
+}: any) {
+  return (
+    <section className="list">
+      <ul>
+        {mostrarTodos.map((todo: any) => (
+          <ItemTodo
+            marcarTodo={marcarTodo}
+            eliminarTodo={eliminarTodo}
+            todo={todo}
+            key={todo.text}
+          />
+        ))}
+      </ul>
+      <CounterTodo
+        eliminarTodoCompletados={eliminarTodoCompletados}
+        eliminarTodo={eliminarTodo}
+        totalTodos={totalTodos}
+        completedTodos={completedTodos}
+      />
+    </section>
+  );
+}
+
+export { ListTodo };

@@ -1,0 +1,75 @@
+@import url('../../App.css');
+
+.itemTodo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 20px 25px;
+	border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+	background: var(--Very-Dark-Desaturated-Blue);
+	list-style: none;
+}
+
+.todoText {
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--Light-Grayish-Blue);
+}
+
+.todoText-check {
+	text-decoration: line-through;
+}
+
+.circulo:hover {
+	background: var(--Check-Background);
+}
+
+.checkIcon-hidden {
+	display: none;
+}
+
+.checkIcon {
+	display: block;
+}
+
+.checkIcon-active {
+	background: var(--Check-Background);
+}
+
+.crossIcon-hidden {
+	cursor: pointer;
+	display: none;
+	margin-left: auto;
+}
+
+.crossIcon-active {
+	display: block;
+}
+
+.itemTodo:hover > .crossIcon-hidden {
+	display: block;
+}
+
+.itemTodo:hover > .circulo {
+	background: var(--Check-Background);
+}
+
+.crossIcon-hidden:hover {
+	filter: brightness(2);
+}
+
+/* Media queries */
+@media screen and (max-width: 1000px) {
+	.itemTodo {
+		padding: 15px 20px;
+	}
+
+	.todoText {
+		font-size: 13px;
+	}
+
+	.crossIcon-hidden {
+		width: 13px;
+	}
+}

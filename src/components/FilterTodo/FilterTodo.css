@@ -1,0 +1,47 @@
+@import url('../../App.css');
+
+.FilterTodo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	margin-top: -35px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.filter-btn {
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 15px;
+	border: none;
+	background: transparent;
+	color: var(--Dark-Grayish-Blue);
+}
+
+.filter-btn-active {
+	color: var(--Bright-Blue);
+}
+
+.filter-btn:hover {
+	color: var(--Light-Grayish-Blue);
+}
+
+.active-btn {
+	margin: 0 15px;
+}
+
+/* Media queries */
+@media screen and (max-width: 1000px) {
+	.FilterTodo {
+		width: 100%;
+		margin-top: 15px;
+		padding: 15px 20px;
+		border-radius: 5px;
+		background: var(--Very-Dark-Desaturated-Blue);
+	}
+
+	.filter-btn {
+		font-size: 13px;
+	}
+}
